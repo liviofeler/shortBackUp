@@ -1,0 +1,15 @@
+<table class="table table-bordered list">
+    <thead>
+            <tr><th align="center">Date Branchement</th><th align="left">LOT</th><th align="left">REFERENCE</th><th align="left">DE</th><th align="left">COMPTEUR</th><th align="left">SECTEUR</th><th align="left">PLANCHE</th><th align="left">Supprimer</th></tr></thead>
+    <tbody>
+
+            {% for user in users  %}
+            <tr>
+                <td>{{ user.dateBr.date|date('d/m/Y') }}</td><td>{{ user.lot }}</td><td>{{ user.reference }}</td><td>{{ user.de }}</td><td>{{ user.compteur }}</td><td>{{ user.secteur }}</td><td>{{ user.planche }}</td><td align="center"><a href="{{ path('sarah_delete',{'compteur':user.compteur}) }}"><span class="glyphicon glyphicon-trash"></span></a></td>
+            </tr>
+
+            {% endfor %}
+
+    </tbody>
+</table>
+

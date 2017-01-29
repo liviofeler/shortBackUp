@@ -1,0 +1,28 @@
+{% extends "SarahBundle::layoutC.html.twig" %}
+
+ {% block corp %}
+{% if error is defined %}
+
+    <header id="entete">
+        {% render(controller('SarahBundle:Client:form', {'error': error})) %}
+
+    </header>
+
+    {% render(controller('SarahBundle:Client:list')) %}
+
+{% else %}
+
+
+
+
+
+
+            <header id="entete">
+                {% render(controller('SarahBundle:Client:form')) %}
+
+            </header>
+
+            {% render(controller('SarahBundle:Client:list')) %}
+
+{% endif %}
+ {% endblock %}

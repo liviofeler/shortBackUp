@@ -1,0 +1,45 @@
+#wraper{
+    width:auto;
+    margin: 0 auto 0 auto;
+}
+nav ul li {
+    display: inline-block;
+
+}
+footer{
+    border:1px dashed #ccc;
+    padding:1em;
+    background:#ddd;
+
+}
+a{
+    text-decoration: none;
+}
+.bienvenue{
+    margin-top: 155px;
+    text-align: center;
+}
+.block1{
+   /* background-image: url("../image/fond.jpg");*/
+}
+body{
+    text-align: center;
+}
+div.container.block1{
+    background-image: url("../image/fond.jpg");
+}
+#entete{
+    margin-top: 150px;
+    margin-left: 50px;
+    text-align:center;
+}
+.list{
+    width:100%;
+    border: 1px solid #6495ed;
+}
+b{
+    text-align: center;
+}
+tbody{
+    margin-bottom: 50px;
+}

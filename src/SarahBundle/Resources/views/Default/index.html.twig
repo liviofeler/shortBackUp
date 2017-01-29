@@ -1,0 +1,27 @@
+{% extends  "::base.html.twig" %}
+
+{% block body %}
+<div class="container block1">
+    <div class="bienvenue">
+
+           <table bgcolor="#6495ed" align="center">
+
+               <tbody>
+                <tr>
+                    <td align="center" width="375">
+                            <a href="{{ path('sarah_client') }}"> <button class="btn btn-info" >Consultant</button></a>
+                    </td>
+                    <td align="center" width="82">
+                            <a href="{{ path('sarah_admin') }}"> <button class="btn btn-info" >Gestionnaire</button></a>
+                    </td>
+                </tr>
+               </tbody>
+           </table>
+
+    </div>
+    <div  id="footer">
+
+    </div>
+
+</div>
+{% endblock %}

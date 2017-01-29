@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Sarah SGBD{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/sarah/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/sarah/css/monCss.css') }}">
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block header %}
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+
+                                    <li  class="active" ><a href="#"> Home </a></li>
+
+
+                        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                            {%  include 'UtilisateursBundle:Default:modulesUsed/utilisateursConnecte.html.twig' %}
+                        {% else %}
+                            {%  include 'UtilisateursBundle:Default:modulesUsed/utilisateurs.html.twig' %}
+                        {% endif %}
+
+                </ul>
+
+
+            </div>
+    </div>
+
+</div>
+{% endblock %}
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="{{ asset('bundles/sarah/js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>

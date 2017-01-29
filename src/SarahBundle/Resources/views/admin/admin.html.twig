@@ -1,0 +1,41 @@
+{% extends "SarahBundle::layoutC.html.twig" %}
+
+ {% block corp %}
+     {% if error is defined %}
+         {% if id is defined %}
+
+                <header id="entete">
+                        {% render(controller('SarahBundle:Admin:formAdmin', {'error': error,'id':id})) %}
+
+                 </header>
+             {% else %}
+                 <header id="entete">
+                     {% render(controller('SarahBundle:Admin:formAdmin', {'error': error})) %}
+
+                 </header>
+             {% endif %}
+                 {% render(controller('SarahBundle:Admin:list')) %}
+
+     {% else %}
+
+
+
+         {% if id is defined %}
+
+
+                 <header id="entete">
+                     {% render(controller('SarahBundle:Admin:formAdmin',{'id':id})) %}
+
+                 </header>
+
+         {% else %}
+             <header id="entete">
+                 {% render(controller('SarahBundle:Admin:formAdmin')) %}
+
+             </header>
+         {% endif %}
+
+         {% render(controller('SarahBundle:Admin:list')) %}
+
+     {% endif %}
+ {% endblock %}

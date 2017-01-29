@@ -1,0 +1,37 @@
+sarah_homepage:
+    path:     /
+    defaults: { _controller: SarahBundle:Home:index }
+sarah_client:
+    path:     /client
+    defaults: { _controller: SarahBundle:Client:index }
+sarah_form:
+    path:     /form/{error}
+    defaults: { _controller: SarahBundle:Client:form, error: 0 }
+    requirements:
+            error: \d*
+
+
+
+
+sarah_admin_form:
+    path:     /form/{error}/{id}
+    defaults: { _controller: SarahBundle:Admin:formAdmin,error:0,id:null }
+    requirements:
+            error: \d*
+            id:  \d*
+
+sarah_list:
+    path:     /list
+    defaults: { _controller: SarahBundle:Client:list }
+
+sarah_admin:
+    path:     /gestionnaire
+    defaults: { _controller: SarahBundle:Admin:index }
+
+#sarah_edit:
+#    path:     /edit/{id}
+#    defaults: { _controller: SarahBundle:Admin:edit }
+
+sarah_delete:
+    path:     /delete/{compteur}
+    defaults: { _controller: SarahBundle:Admin:remove }

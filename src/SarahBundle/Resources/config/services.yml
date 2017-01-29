@@ -1,0 +1,4 @@
+services:
+#    sarah.example:
+#        class: SarahBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

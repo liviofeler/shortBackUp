@@ -1,0 +1,95 @@
+
+
+<div class="well">
+   <form  action="{{ path('sarah_admin_form') }}" {{ form_enctype(form) }} method="POST" style="height: 83px;">
+
+    {{ form_errors(form) }}
+       <table>
+           <thead>
+           <tr>
+               <th>{{ form_label(form.dateBr, "Date Branchement", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}</th>
+               <th>{{ form_label(form.lot, "Lot", {'label_attr': {'class': 'col-sm-1 control-label'}} )}}</th>
+               <th>{{ form_label(form.reference, "Reference", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}</th>
+               <th>{{ form_label(form.de, "DE", {'label_attr': {'class': 'col-sm-1 control-label'}}) }}</th>
+               <th>{{ form_label(form.compteur, "Compteur", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}</th>
+               <th>{{ form_label(form.secteur, "Secteur", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}</th>
+               <th>{{ form_label(form.planche, "Planche", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}</th>
+           </tr>
+           </thead>
+           <tbody>
+           <tr>
+               <td >{{ form_widget(form.dateBr, {'attr': {'class': 'form-control'}}) }}</td>
+               <td>{{ form_widget(form.lot, {'attr': {'class': 'form-control'}}) }}</td>
+               <td>{{ form_widget(form.reference, {'attr': {'class': 'form-control'}}) }}</td>
+               <td>{{ form_widget(form.de, {'attr': {'class': 'form-control'}}) }}</td>
+               <td>{{ form_widget(form.compteur, {'attr': {'class': 'form-control'}}) }}</td>
+               <td>{{ form_widget(form.secteur, {'attr': {'class': 'form-control'}}) }}</td>
+               <td>{{ form_widget(form.planche, {'attr': {'class': 'form-control'}}) }}</td>
+
+           </tr>
+           <tr align="center">
+               {% if error is defined %}
+                   <td  colspan="4" rowspan="1">  {{ form_rest(form) }} {{ form_widget(form.Inserer,{'attr':{'class':'btn btn-primary'}}) }}</td>
+                   <td  colspan="1" rowspan="1" bgcolor="#a52a2a" align="left"> Désoler, ce compteur existe déjà</td>
+                   <td> </td><td> </td><td> </td>
+               {% else %}
+                   <td  colspan="7" rowspan="2">  {{ form_rest(form) }} {{ form_widget(form.Inserer,{'attr':{'class':'btn btn-primary'}}) }}</td>
+
+               {% endif %}
+           </tr>
+           </tbody>
+       </table>
+   </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#<center style="margin-top:50px;">
+    <form method="POST" action="{{ path('sarah_form') }}" style="height: 83px;">
+        <table>
+            <thead>
+            <tr>
+                <th><label for="create">DATE</label></th>
+                <th><label for="LOT">LOT</label></th>
+                <th><label for="REFERENCE">REFERENCE</label></th>
+                <th><label for="DE">DE</label></th>
+                <th><label for="COMPTEUR">COMPTEUR</label></th>
+                <th><label for="SECTEUR">SECTEUR</label></th>
+                <th><label for="PLANCHE">PLANCHE</label></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td ><input type="date" name="create" /></td>
+                <td><input type="number" name="LOT" /></td>
+                <td><input type="number" name="REFERENCE" /></td>
+                <td><input type="number" name="DE" /></td>
+                <td><input type="number" name="COMPTEUR" /></td>
+                <td><input type="text" name="SECTEUR" /></td>
+                <td><input type="text" name="PLANCHE" /></td>
+
+            </tr>
+            <tr align="center">
+                <td  colspan="7" rowspan="2"><input type="submit" value="Inserer" /></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</center> #}
