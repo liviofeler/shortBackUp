@@ -2,11 +2,11 @@
 parameters:
     database_host: mysql.hostinger.fr
     database_port: null
-    database_name: u862332133_sarah
-    database_user: u862332133_sarah
-    database_password: sarah2016
+    database_name: test
+    database_user: test   
+    database_password: test2016
     mailer_transport: smtp
     mailer_host: 127.0.0.1
-    mailer_user: null
+    mailer_user: test@test.fr
     mailer_password: null
     secret: 3d93f151ef43d505dc32d357b0887dbfc4377692
